@@ -26,7 +26,6 @@
 		CECEF9D128E0BE4300F87248 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEF9D028E0BE4300F87248 /* CoordinatorProtocol.swift */; };
 		CECEF9D328E0BE4D00F87248 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEF9D228E0BE4D00F87248 /* Dynamic.swift */; };
 		CECEF9D528E0BE7A00F87248 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEF9D428E0BE7A00F87248 /* AppCoordinator.swift */; };
-		CECEF9D728E0BE8000F87248 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEF9D628E0BE8000F87248 /* MainTabBarController.swift */; };
 		CECEF9DA28E0C06D00F87248 /* CustomUIExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEF9D928E0C06D00F87248 /* CustomUIExtentions.swift */; };
 		CECEF9E028E0C07D00F87248 /* Checker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEF9DC28E0C07D00F87248 /* Checker.swift */; };
 		CECEF9E228E0C07D00F87248 /* LoginInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEF9DE28E0C07D00F87248 /* LoginInspector.swift */; };
@@ -61,7 +60,6 @@
 		CECEF9D028E0BE4300F87248 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		CECEF9D228E0BE4D00F87248 /* Dynamic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
 		CECEF9D428E0BE7A00F87248 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		CECEF9D628E0BE8000F87248 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		CECEF9D928E0C06D00F87248 /* CustomUIExtentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUIExtentions.swift; sourceTree = "<group>"; };
 		CECEF9DC28E0C07D00F87248 /* Checker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checker.swift; sourceTree = "<group>"; };
 		CECEF9DE28E0C07D00F87248 /* LoginInspector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginInspector.swift; sourceTree = "<group>"; };
@@ -109,7 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				CECEF9D428E0BE7A00F87248 /* AppCoordinator.swift */,
-				CECEF9D628E0BE8000F87248 /* MainTabBarController.swift */,
 				CE545B5128E357B90027C88A /* ModuleFactory.swift */,
 			);
 			path = Coordinating;
@@ -348,7 +345,6 @@
 				CECEF9D128E0BE4300F87248 /* CoordinatorProtocol.swift in Sources */,
 				CECEF9EA28E0C23600F87248 /* LoginModel.swift in Sources */,
 				CED2D0BD26E532F600ED0387 /* PostTableViewCell.swift in Sources */,
-				CECEF9D728E0BE8000F87248 /* MainTabBarController.swift in Sources */,
 				CECEF9E028E0C07D00F87248 /* Checker.swift in Sources */,
 				CE8D6E2926A30EFD00A25380 /* PostViewController.swift in Sources */,
 				CECEF9D328E0BE4D00F87248 /* Dynamic.swift in Sources */,
