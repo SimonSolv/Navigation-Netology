@@ -32,7 +32,7 @@ class GalleryCollectionViewCell: UICollectionViewCell {
     lazy var trashButton = CustomButton(title: "", titleColor: .white, onTap: {
         self.deletePhoto()
     })
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
@@ -71,11 +71,11 @@ class GalleryCollectionViewCell: UICollectionViewCell {
     }
     
     func displayDeletingAlert() {
-        let alertVC = UIAlertController(title: "Внимание!", message: "Вы действительно хотите удалить фото?", preferredStyle: .alert )
-        let okAction = UIAlertAction(title: "Удалить", style: .destructive, handler: {(_: UIAlertAction!) in
+        let alertVC = UIAlertController(title: "Warning", message: "Are you sure you want to delete this photo?", preferredStyle: .alert )
+        let okAction = UIAlertAction(title: "Delete", style: .destructive, handler: {(_: UIAlertAction!) in
             self.controller!.deleteCell(self.imageView.image!)
         })
-        let denyAction = UIAlertAction(title: "Отмена", style: .default, handler: {(_: UIAlertAction!) in })
+        let denyAction = UIAlertAction(title: "Cancel", style: .default, handler: {(_: UIAlertAction!) in })
         alertVC.addAction(okAction)
         alertVC.addAction(denyAction)
         controller!.present(alertVC, animated: true, completion: nil)
