@@ -56,4 +56,9 @@ class SearchJokeViewController: UITableViewController, UISearchBarDelegate {
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let share = UIActivityViewController(activityItems: [jokes[indexPath.section]], applicationActivities: nil)
+        present(share, animated: true)
+    }
 }
