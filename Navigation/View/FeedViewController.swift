@@ -5,7 +5,7 @@ class FeedViewController: UIViewController, Coordinated {
     
     var coordinator: CoordinatorProtocol?
 
-    var titleInfo = Post(title: "Post information")
+    var titleInfo = Post(title: "Chuck Norris Joke")
 
     var checkWord: String?
 
@@ -59,13 +59,13 @@ class FeedViewController: UIViewController, Coordinated {
     }
 
     lazy var postButton1: CustomButton = {
-        let btn = CustomButton(title: "New Post 1", titleColor: .white, onTap: tapNewPostButton)
+        let btn = CustomButton(title: "Chuck Norris Random Joke", titleColor: .white, onTap: openRandomJokes)
         btn.backgroundColor = .systemRed
         return btn
     }()
 
     lazy var postButton2: CustomButton = {
-        let btn = CustomButton(title: "New Post 2", titleColor: .white, onTap: tapNewPostButton)
+        let btn = CustomButton(title: "Search my joke", titleColor: .white, onTap: openSearchJoke)
         btn.backgroundColor = .systemGray
         return btn
     }()
@@ -131,15 +131,20 @@ class FeedViewController: UIViewController, Coordinated {
         checkWord = firstTextfield.text
     }
 
-    func tapNewPostButton() {
-        let controller = PostViewController()
+    func openRandomJokes() {
+        let controller = JokeViewController()
         navigationController?.pushViewController(controller, animated: true)
         controller.titleName = titleInfo.title
+    }
+    
+    func openSearchJoke() {
+        let controller = SearchJokeViewController(style: .grouped)
+        navigationController?.pushViewController(controller, animated: true)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "Post" else { return }
-        guard segue.destination is PostViewController else { return }
+        guard segue.destination is JokeViewController else { return }
     }
 }
 extension FeedViewController {
