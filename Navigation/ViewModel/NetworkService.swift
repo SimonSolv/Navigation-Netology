@@ -1,25 +1,15 @@
 import Foundation
 
 struct NetworkService {
-    static func request(for configuration: AppConfiguration) {
-        switch configuration {
-        case .first:
-            let address = "https://swapi.dev/api/people/8"
-            requestSession(address: address)
-        case .second:
-            let address = "https://swapi.dev/api/starships/3"
-            requestSession(address: address)
-        case .third:
-            let address = "https://swapi.dev/api/planets/5"
-            requestSession(address: address)
-        }
+    static func request(for address: String) {
+        requestSession(address: address)
     }
 }
 
 enum AppConfiguration: String, CaseIterable {
-    case first
-    case second
-    case third
+    case first = "https://swapi.dev/api/people/8"
+    case second = "https://swapi.dev/api/starships/3"
+    case third = "https://swapi.dev/api/planets/5"
 }
 
 func requestSession(address: String) {
