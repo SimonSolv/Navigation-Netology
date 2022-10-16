@@ -4,10 +4,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
+    
+
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 
         guard let scene = (scene as? UIWindowScene) else { return }
-
+        
+        let appConfiguration = AppConfiguration.allCases.randomElement()!.rawValue
+        NetworkService.request(for: appConfiguration)
+        
         window = UIWindow(windowScene: scene)
         window?.makeKeyAndVisible()
         let initialController = UITabBarController()
@@ -20,4 +25,5 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         window?.rootViewController = coordinator.start()!
     }
+    
 }

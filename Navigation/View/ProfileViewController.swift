@@ -58,7 +58,7 @@ class ProfileViewController: UIViewController, PhotosTableViewCellDelegate, Coor
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "Post" else { return }
-        guard segue.destination is PostViewController else { return }
+        guard segue.destination is JokeViewController else { return }
     }
 
 }
