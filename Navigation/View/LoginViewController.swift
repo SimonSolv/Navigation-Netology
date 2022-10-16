@@ -166,7 +166,7 @@ class LoginViewController: UIViewController, Coordinated {
         wrongPswdView.isHidden = true
         inputSourceView.layer.borderColor = UIColor.lightGray.cgColor
     }
-
+//MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
