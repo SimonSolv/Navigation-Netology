@@ -26,8 +26,8 @@ class BrudForceOperation: Operation {
         super.init()
     }
     override func main() {
-        print("block started")
+      //  print("block started")
         doBlock()
-        print ("block ended")
+      //  print ("block ended")
     }
 }

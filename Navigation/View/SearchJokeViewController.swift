@@ -13,7 +13,7 @@ class SearchJokeViewController: UITableViewController, UISearchBarDelegate {
     }
     
     
-    var jokes: [String] = ["Pull down to search..."]
+    var jokes: [Joke] = []
     
     let searchController = UISearchController(searchResultsController: nil)
     
@@ -33,7 +33,9 @@ class SearchJokeViewController: UITableViewController, UISearchBarDelegate {
         title = "Search Joke"
         view.backgroundColor = .systemGray6
         tableView.register(JokeTableViewCell.self, forCellReuseIdentifier: JokeTableViewCell.identifier)
+
         navigationItem.searchController = searchController
+        searchController.isActive = true
         //searchController.searchResultsUpdater = self
         searchController.searchBar.delegate = self
     }
@@ -51,14 +53,14 @@ class SearchJokeViewController: UITableViewController, UISearchBarDelegate {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: JokeTableViewCell.identifier, for: indexPath)
         
-        cell.textLabel?.text = jokes[indexPath.section]
+        cell.textLabel?.text = jokes[indexPath.section].text
         cell.textLabel?.numberOfLines = 0
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let share = UIActivityViewController(activityItems: [jokes[indexPath.section]], applicationActivities: nil)
+        let share = UIActivityViewController(activityItems: [jokes[indexPath.section].text], applicationActivities: nil)
         present(share, animated: true)
     }
 }

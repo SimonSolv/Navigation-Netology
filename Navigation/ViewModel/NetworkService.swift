@@ -6,6 +6,8 @@ struct NetworkService {
     }
 }
 
+
+
 enum AppConfiguration: String, CaseIterable {
     case first = "https://swapi.dev/api/people/8"
     case second = "https://swapi.dev/api/starships/3"

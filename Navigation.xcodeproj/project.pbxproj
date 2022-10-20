@@ -24,8 +24,8 @@
 		CE974C8A28F5D5CD00E343E5 /* ChuckJokesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE974C8928F5D5CD00E343E5 /* ChuckJokesModel.swift */; };
 		CE974C8E28F5EB1F00E343E5 /* SearchJokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE974C8D28F5EB1F00E343E5 /* SearchJokeViewController.swift */; };
 		CE974C9028F5F0E000E343E5 /* JokeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE974C8F28F5F0E000E343E5 /* JokeTableViewCell.swift */; };
+		CE9DEEF82901CF3C00BA75D6 /* NameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9DEEF72901CF3C00BA75D6 /* NameTableViewCell.swift */; };
 		CEBE015B27496A74009CFB06 /* iOSIntPackage in Frameworks */ = {isa = PBXBuildFile; productRef = CEBE015A27496A74009CFB06 /* iOSIntPackage */; };
-		CECEF9C328E0BCD600F87248 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEF9C228E0BCD600F87248 /* FeedViewModel.swift */; };
 		CECEF9CF28E0BE0E00F87248 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEF9CE28E0BE0E00F87248 /* ProfileModel.swift */; };
 		CECEF9D128E0BE4300F87248 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEF9D028E0BE4300F87248 /* CoordinatorProtocol.swift */; };
 		CECEF9D328E0BE4D00F87248 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEF9D228E0BE4D00F87248 /* Dynamic.swift */; };
@@ -63,7 +63,7 @@
 		CE974C8928F5D5CD00E343E5 /* ChuckJokesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckJokesModel.swift; sourceTree = "<group>"; };
 		CE974C8D28F5EB1F00E343E5 /* SearchJokeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchJokeViewController.swift; sourceTree = "<group>"; };
 		CE974C8F28F5F0E000E343E5 /* JokeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeTableViewCell.swift; sourceTree = "<group>"; };
-		CECEF9C228E0BCD600F87248 /* FeedViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		CE9DEEF72901CF3C00BA75D6 /* NameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTableViewCell.swift; sourceTree = "<group>"; };
 		CECEF9CE28E0BE0E00F87248 /* ProfileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		CECEF9D028E0BE4300F87248 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		CECEF9D228E0BE4D00F87248 /* Dynamic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
@@ -131,6 +131,7 @@
 		CE545B4E28E356830027C88A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CE8D6E2F26A464E100A25380 /* InfoViewController.swift */,
 				CE8D6E2226A309F900A25380 /* FeedViewController.swift */,
 				CECEF9DF28E0C07D00F87248 /* LoginViewController.swift */,
 				CECEF9E528E0C08900F87248 /* GalleryCollectionViewCell.swift */,
@@ -142,9 +143,9 @@
 				CE524CFB26FCFC6C009C182B /* PhotosTableViewCell.swift */,
 				CE524CFE26FE47E3009C182B /* PhotoCollectionViewCell.swift */,
 				CE8D6E2826A30EFD00A25380 /* JokeViewController.swift */,
-				CE8D6E2F26A464E100A25380 /* InfoViewController.swift */,
 				CE974C8D28F5EB1F00E343E5 /* SearchJokeViewController.swift */,
 				CE974C8F28F5F0E000E343E5 /* JokeTableViewCell.swift */,
+				CE9DEEF72901CF3C00BA75D6 /* NameTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -163,7 +164,6 @@
 			isa = PBXGroup;
 			children = (
 				CECEF9CE28E0BE0E00F87248 /* ProfileModel.swift */,
-				CECEF9C228E0BCD600F87248 /* FeedViewModel.swift */,
 				CE974C8928F5D5CD00E343E5 /* ChuckJokesModel.swift */,
 				CECEF9E928E0C23600F87248 /* LoginModel.swift */,
 				CED5A04827F7704500F3CD26 /* FeedModel.swift */,
@@ -373,8 +373,8 @@
 				CECEF9E828E0C08900F87248 /* GalleryViewController.swift in Sources */,
 				CECEF9CF28E0BE0E00F87248 /* ProfileModel.swift in Sources */,
 				CED2D0C426E9212700ED0387 /* ProfileTableHeaderView.swift in Sources */,
+				CE9DEEF82901CF3C00BA75D6 /* NameTableViewCell.swift in Sources */,
 				CECEF9E228E0C07D00F87248 /* LoginInspector.swift in Sources */,
-				CECEF9C328E0BCD600F87248 /* FeedViewModel.swift in Sources */,
 				CE545B5228E357B90027C88A /* ModuleFactory.swift in Sources */,
 				CE524CFC26FCFC6C009C182B /* PhotosTableViewCell.swift in Sources */,
 				CECEF9D528E0BE7A00F87248 /* AppCoordinator.swift in Sources */,

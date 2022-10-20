@@ -10,8 +10,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         guard let scene = (scene as? UIWindowScene) else { return }
         
-        let appConfiguration = AppConfiguration.allCases.randomElement()!.rawValue
-        NetworkService.request(for: appConfiguration)
+//        let appConfiguration = AppConfiguration.allCases.randomElement()!.rawValue
+//        NetworkService.request(for: appConfiguration)
         
         window = UIWindow(windowScene: scene)
         window?.makeKeyAndVisible()
