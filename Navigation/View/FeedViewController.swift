@@ -92,10 +92,12 @@ class FeedViewController: UIViewController, Coordinated {
         setupViews()
         setupConstraints()
         buttonsView.spacing = 10
+        let infoButton = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(infoTapped))
+        navigationItem.rightBarButtonItem = infoButton
     }
 
     func setupViews() {
-        view.backgroundColor = .blue
+        view.backgroundColor = .systemGray4
         buttonsView.translatesAutoresizingMaskIntoConstraints = false
         buttonsView.axis = .vertical
         view.addSubview(buttonsView)
@@ -131,6 +133,12 @@ class FeedViewController: UIViewController, Coordinated {
         checkWord = firstTextfield.text
     }
 
+    @objc func infoTapped() {
+        let controller = InfoViewController()
+        navigationController?.pushViewController(controller, animated: true)
+
+    }
+    
     func openRandomJokes() {
         let controller = JokeViewController()
         navigationController?.pushViewController(controller, animated: true)

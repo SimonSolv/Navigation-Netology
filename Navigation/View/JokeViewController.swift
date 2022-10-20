@@ -24,7 +24,7 @@ class JokeViewController: UIViewController {
                 DispatchQueue.main.async {
                     self.infoButton.isEnabled = true
                     if let joke = joke {
-                        self.jokeLabel.text = joke
+                        self.jokeLabel.text = joke.text
                         self.infoButton.isEnabled = true
                     } else {
                         self.jokeLabel.text = "Something went wrong: push Get Joke again"
