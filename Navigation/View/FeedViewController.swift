@@ -4,6 +4,8 @@ import SnapKit
 class FeedViewController: UIViewController, Coordinated {
     
     var coordinator: CoordinatorProtocol?
+    
+
 
     var titleInfo = Post(title: "Chuck Norris Joke")
 

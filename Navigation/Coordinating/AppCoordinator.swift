@@ -18,13 +18,15 @@ class AppCoordinator: CoordinatorProtocol {
         self.controller = controller
     }
 
-    func eventAction(event: Event) {
+    func eventAction(event: Event, iniciator: UIViewController) {
         switch event {
         case .loginSuccess:
-            let profileController = self.factory?.makeModule(type: .profile) as? ProfileViewController
-            guard let initialController = self.controller?.viewControllers![1] else {return}
-            guard let secondVC = profileController else {return}
-            initialController.navigationController?.pushViewController(secondVC, animated: false)
+            let profileController = self.factory?.makeModule(type: .profile) as! ProfileViewController
+            guard let _ = self.controller?.viewControllers![1] else {
+                print("Error: No initial controller for ProfileVC")
+                return
+            }
+            iniciator.navigationController?.pushViewController(profileController, animated: false)
         case .secondButtonTapped:
             return
         }

@@ -1,10 +1,16 @@
 import UIKit
+import FirebaseCore
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+class SceneDelegate: UIResponder, UIWindowSceneDelegate  {
 
     var window: UIWindow?
 
-    
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions:
+                     [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        FirebaseApp.configure()
+        return true
+    }
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 
@@ -12,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
 //        let appConfiguration = AppConfiguration.allCases.randomElement()!.rawValue
 //        NetworkService.request(for: appConfiguration)
-        
+        FirebaseApp.configure()
         window = UIWindow(windowScene: scene)
         window?.makeKeyAndVisible()
         let initialController = UITabBarController()
@@ -26,4 +32,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.rootViewController = coordinator.start()!
     }
     
+    func sceneDidDisconnect(_ scene: UIScene) {
+        
+//        do {
+//            try? FirebaseAuth.Auth.auth().signOut()
+//            return
+//            } catch {
+//            print(error.localizedDescription)
+//        }
+        
+    }
 }
+
+
+
