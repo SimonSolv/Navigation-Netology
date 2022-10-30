@@ -22,7 +22,6 @@ final class ModuleFactory: FabricProtocol {
                 controller.tabBarItem = UITabBarItem(title: "Profile", image: .init(imageLiteralResourceName: "profile") , tag: 0)
                 controller.coordinator = self.coordinator
                 let myFabric = MyLoginFactory()
-                controller.delegate = myFabric.factory()
                 return controller
             }()
             return loginController

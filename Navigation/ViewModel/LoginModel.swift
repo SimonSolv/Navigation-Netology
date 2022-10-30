@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 extension String {
     var digits:      String { return "0123456789" }
@@ -31,3 +32,26 @@ class BrudForceOperation: Operation {
       //  print ("block ended")
     }
 }
+
+struct UserInfo {
+    var firstName: String = ""
+    var id: String = ""
+    var idToken: String = ""
+    var lastName: String = ""
+    var email: String = ""
+    var googleProfilePicURL: String = ""
+}
+
+func loginAlert() -> UIAlertController {
+    let alertVC = UIAlertController(title: "Ошибка", message: "Заполните все необходимые поля", preferredStyle: .alert )
+    let okAction = UIAlertAction(title: "Ok", style: .default, handler: {(_: UIAlertAction!) in print("Ok Action")})
+    alertVC.addAction(okAction)
+    return alertVC
+}
+
+protocol LoginViewControllerDelegate: AnyObject, CheckerServiceProtocol {
+    func checkPswd (login: String, password: String) -> Bool
+}
+
+
+

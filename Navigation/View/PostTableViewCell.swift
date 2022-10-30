@@ -1,5 +1,6 @@
 import UIKit
 import iOSIntPackage
+import SnapKit
 
 class PostTableViewCell: UITableViewCell {
 
@@ -19,7 +20,6 @@ class PostTableViewCell: UITableViewCell {
 
     lazy var postImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.backgroundColor = .black
         imageView.contentMode = .scaleAspectFit
         imageView.sizeToFit()
@@ -28,7 +28,6 @@ class PostTableViewCell: UITableViewCell {
 
     lazy var postTitle: UILabel = {
         let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         label.numberOfLines = 2
@@ -37,7 +36,6 @@ class PostTableViewCell: UITableViewCell {
 
     lazy var postDescription: UILabel = {
         let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .systemGray
         label.font = UIFont.systemFont(ofSize: 14)
         label.numberOfLines = 0
@@ -46,7 +44,6 @@ class PostTableViewCell: UITableViewCell {
 
     lazy var postViews: UILabel = {
         let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 16)
         label.numberOfLines = 1
@@ -55,7 +52,6 @@ class PostTableViewCell: UITableViewCell {
 
     lazy var postLikes: UILabel = {
         let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 16)
         label.numberOfLines = 1
