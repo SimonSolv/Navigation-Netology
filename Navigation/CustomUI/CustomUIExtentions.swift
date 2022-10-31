@@ -29,9 +29,7 @@ extension CustomButton {
             self.setBackgroundImage(UIImage(named: "blue_pixel"), for: .normal)
             self.layer.cornerRadius = 10
             self.clipsToBounds = true
-            self.translatesAutoresizingMaskIntoConstraints = false
         case .status:
-            self.translatesAutoresizingMaskIntoConstraints = false
             self.backgroundColor = .blue
             self.layer.cornerRadius = 12
             self.layer.shadowColor = UIColor.black.cgColor
@@ -58,9 +56,9 @@ extension UITextField {
             self.textColor = .black
             self.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: self.frame.height))
             self.leftViewMode = .always
-            self.translatesAutoresizingMaskIntoConstraints = false
+
         case .status:
-            self.translatesAutoresizingMaskIntoConstraints = false
+
             self.backgroundColor = .white
             self.layer.cornerRadius = 12
             self.layer.borderWidth = 1
@@ -78,7 +76,6 @@ extension UITextField {
             self.textColor = .black
             self.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: self.frame.height))
             self.leftViewMode = .always
-            self.translatesAutoresizingMaskIntoConstraints = false
         }
     }
 }
