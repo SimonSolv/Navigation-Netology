@@ -70,8 +70,7 @@ build/
 # Up to you, but ... current advice: ignore it.
 *.xccheckout
 
-#
-#
+
 # OPTION 1: ---------------------------------
 #     throw away ALL personal settings (including custom schemes!
 #     - unless they are "shared")
@@ -113,8 +112,10 @@ xcuserdata/**/*
 # c.f. http://guides.cocoapods.org/using/using-cocoapods.html#what-is-a-podfilelock
 # c.f. http://guides.cocoapods.org/using/using-cocoapods.html#should-i-ignore-the-pods-directory-in-source-control
 #
+
 Podfile.lock
-#
+
+
 # RUBY:
 #
 # c.f. http://yehudakatz.com/2010/12/16/clarifying-the-roles-of-the-gemspec-and-gemfile/
@@ -132,11 +133,6 @@ Podfile.lock
 # -- UNVERIFIED: c.f. http://stackoverflow.com/a/50283/153422
 #
 #tm_build_errors
-
-####
-# UNKNOWN: recommended by others, but I can't discover what these files are
-
-
 
 FirebaseAuth/Tests/Sample/Sample/Application.plist
 FirebaseAuth/Tests/Sample/Sample/AuthCredentials.h
@@ -174,8 +170,6 @@ FirebaseMLModelDownloader/Apps/Sample/**/GoogleService-Info.plist
 
 # FirebasePerformance dev test App and integration tests GoogleService-Info.plist
 FirebasePerformance/**/GoogleService-Info.plist
-
-Secrets.tar
 
 # OS X
 .DS_Store
@@ -229,7 +223,6 @@ Mint
 
 Pods/
 Podfile.lock
-*.xcworkspace
 
 
 # Visual Studio
