@@ -78,7 +78,7 @@ build/
 # As per build/ and DerivedData/, this ought to have a trailing slash
 #
 # NB: this is exclusive with OPTION 2 below
-xcuserdata/
+# xcuserdata/
 
 
 # OPTION 2: ---------------------------------
@@ -89,36 +89,9 @@ xcuserdata/
 #    or manually install git over the top of the OS X version
 # NB: this is exclusive with OPTION 1 above
 #
-#xcuserdata/**/*
+xcuserdata/**/*
 
-#     (requires option 2 above): Personal Schemes
-#
-#!xcuserdata/**/xcschemes/*
 
-####
-# Xcode 4 workspaces - more detailed
-#
-# Workspaces are important! They are a core feature of Xcode - don't exclude them :)
-#
-# Workspace layout is quite spammy. For reference:
-#
-# /(root)/
-#   /(project-name).xcodeproj/
-#     project.pbxproj
-#     /project.xcworkspace/
-#       contents.xcworkspacedata
-#       /xcuserdata/
-#         /(your name)/xcuserdatad/
-#           UserInterfaceState.xcuserstate
-#     /xcshareddata/
-#       /xcschemes/
-#         (shared scheme name).xcscheme
-#     /xcuserdata/
-#       /(your name)/xcuserdatad/
-#         (private scheme).xcscheme
-#         xcschememanagement.plist
-#
-#
 
 ####
 # Xcode 4 - Deprecated classes
@@ -163,36 +136,7 @@ Podfile.lock
 ####
 # UNKNOWN: recommended by others, but I can't discover what these files are
 
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@SimonSolv 
-firebase/
-firebase-ios-sdk
-Public
-Code
-Issues
-289
-Pull requests
-53
-Discussions
-Actions
-Projects
-2
-Security
-Insights
-firebase-ios-sdk/.gitignore
-@chliangGoogle
-chliangGoogle Remote Config Dynamic Property Wrapper (#10155)
-Latest commit f804aba on 23 Sep
- History
- 20 contributors
-@paulb777@wilhuff@chliangGoogle@maksymmalyhin@XiangtianDai@ncooke3@granluo@manjanac@dmandar@ryanwilson@chFlorian@peterfriese
-153 lines (121 sloc)  4.09 KB
+
 
 FirebaseAuth/Tests/Sample/Sample/Application.plist
 FirebaseAuth/Tests/Sample/Sample/AuthCredentials.h
@@ -287,18 +231,6 @@ Pods/
 Podfile.lock
 *.xcworkspace
 
-# CMake
-.downloads
-Debug
-Release
-Ninja
-
-# CLion
-/cmake-build-debug
-/cmake-build-release
-
-# Python
-*.pyc
 
 # Visual Studio
 /.vs
@@ -413,10 +345,4 @@ examples/ios/objc/Draw/Constants.h
 ## Sync testing
 /.baas
 
-## Swiftpm
-.swiftpm
-.build
-Package.resolved
-
-examples/installation/ios/swift/SwiftPackageManagerExample/SwiftPackageManagerExample.xcodeproj
 
