@@ -2,6 +2,7 @@ import SnapKit
 import UIKit
 import Firebase
 import GoogleSignIn
+import RealmSwift
 
 
 
@@ -17,7 +18,8 @@ class LoginViewController: UIViewController, Coordinated {
     private var userPassword: String?
     lazy var contentView = UIScrollView()
     var brudPass = ""
-    
+    let realm = try! Realm()
+    var users: Results<Credentials>?
     let handle = Auth.auth().addStateDidChangeListener { auth, user in
             // ...
     }
@@ -95,8 +97,6 @@ class LoginViewController: UIViewController, Coordinated {
         return label
     }()
 
-
-    
     func unvealdPassword(password: String) {
         self.passwordTextField.isSecureTextEntry = false
         self.passwordTextField.text = password
@@ -181,9 +181,10 @@ class LoginViewController: UIViewController, Coordinated {
 //MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        users = realm.objects(Credentials.self)
         setupViews()
         setupConstraits()
-        googleSignInButton.addTarget(self, action: #selector(googleAuthLogin), for: .touchUpInside)
+      //  googleSignInButton.addTarget(self, action: #selector(googleAuthLogin), for: .touchUpInside)
      //   signInLineButton.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
 
        // print("User name is \(myUser.firstName)")
@@ -386,7 +387,7 @@ extension LoginViewController {
 extension LoginViewController {
     
     @objc func googleAuthLogin() {
-        let googleConfig = GIDConfiguration(clientID: "822406758404-fev69ian0g95hb9jcgve9pisak35s5bl.apps.googleusercontent.com")
+        let googleConfig = GIDConfiguration(clientID: "453388259695-17omfcqm8fr926fcehguloregfpm1rni.apps.googleusercontent.com")
         self.googleSignIn.signIn(with: googleConfig, presenting: self) { user, error in
             if error == nil {
                 guard let user = user else {
@@ -412,8 +413,10 @@ extension LoginViewController {
     
     func loginButtonTapped() {
         print("TappingLogin")
-        if self.loginTextField.text != nil && self.passwordTextField.text != nil {
-            inspector.checkCredentials(email: self.loginTextField.text!, password: self.passwordTextField.text!, iniciator: self)
+        if self.loginTextField.text != "" && self.passwordTextField.text != "" {
+            print(self.loginTextField.text!)
+            print(self.passwordTextField.text!)
+            inspector.checkCredentials(email: self.loginTextField.text!, password: self.passwordTextField.text!, iniciator: self, realm: true)
         } else {
             self.present(loginAlert(), animated: true, completion: nil)
             return

@@ -14,6 +14,7 @@ final class ModuleFactory: FabricProtocol {
             return controller
         case .profile:
             let controller = ProfileViewController()
+            controller.tabBarItem = UITabBarItem(title: "Profile", image: .init(imageLiteralResourceName: "profile") , tag: 0)
             controller.coordinator = self.coordinator
             return controller
         case.login:

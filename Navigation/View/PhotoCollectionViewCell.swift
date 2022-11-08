@@ -1,4 +1,5 @@
 import UIKit
+import SnapKit
 
 class PhotoCollectionViewCell: UICollectionViewCell {
     static let  identifier = "lib"
@@ -22,16 +23,13 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     }()
 
     private func setupView() {
-
         contentView.addSubview(photoImage)
-
-        let constraints = [
-            photoImage.topAnchor.constraint(equalTo: contentView.topAnchor),
-            photoImage.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            photoImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            photoImage.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
-        ]
-        NSLayoutConstraint.activate(constraints)
+        photoImage.snp.makeConstraints {(make) in
+            make.top.equalTo(contentView.snp.top)
+            make.bottom.equalTo(contentView.snp.bottom)
+            make.leading.equalTo(contentView.snp.leading)
+            make.trailing.equalTo(contentView.snp.trailing)
+        }
     }
 
     override init(frame: CGRect) {

@@ -178,6 +178,6 @@ class SignUpViewController: UIViewController {
             print("Invalid Password NIL")
             return
         }
-        delegate?.signUp(login: email!, password: password!, iniciator: self)
+        delegate?.signUp(login: email!, password: password!, iniciator: self, realm: true)
     }
 }

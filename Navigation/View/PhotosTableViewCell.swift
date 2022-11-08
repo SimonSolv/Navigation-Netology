@@ -1,5 +1,6 @@
 import UIKit
 import iOSIntPackage
+import SnapKit
 
 class PhotosTableViewCell: UITableViewCell {
     static let  identifier = "photos"
@@ -26,13 +27,11 @@ class PhotosTableViewCell: UITableViewCell {
     lazy var viewAllButton: CustomButton = {
         let btn = CustomButton(title: "", titleColor: .white, onTap: viewAllButtonTapped)
         btn.setImage(UIImage(named: "rightArrow"), for: .normal)
-        btn.translatesAutoresizingMaskIntoConstraints = false
        return btn
     }()
 
     let photosLabel: UILabel = {
        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Photos"
         label.textColor = UIColor.black
         label.font = .boldSystemFont(ofSize: 24)
@@ -41,8 +40,8 @@ class PhotosTableViewCell: UITableViewCell {
 
     func viewAllButtonTapped() {
         delegate?.openGallery()
-        print("arrow in TableViewCell")
     }
+    
     private func setupViews() {
         contentView.addSubview(photosLabel)
         contentView.addSubview(viewAllButton)
@@ -50,23 +49,33 @@ class PhotosTableViewCell: UITableViewCell {
     }
 
     private func setupConstraints() {
-        let constraints = [
-            photosLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 12),
-            photosLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 12),
-
-            viewAllButton.centerYAnchor.constraint(equalTo: photosLabel.centerYAnchor),
-            viewAllButton.heightAnchor.constraint(equalToConstant: 20),
-            viewAllButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -12),
-            viewAllButton.widthAnchor.constraint(equalToConstant: 20),
-
-            collectionView.topAnchor.constraint(equalTo: photosLabel.bottomAnchor, constant: 12),
-            collectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            collectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            collectionView.heightAnchor.constraint(equalToConstant: 60),
-            collectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -12)
-        ]
-
-        NSLayoutConstraint.activate(constraints)
+        
+//        contentView.snp.makeConstraints {(make) in
+//            make.height.equalTo(200)
+//        }
+        
+        photosLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(contentView.snp.top).offset(12)
+            make.leading.equalTo(contentView.snp.leading).offset(12)
+            make.height.equalTo(20)
+        }
+        
+        viewAllButton.snp.makeConstraints { (make) in
+            make.centerY.equalTo(photosLabel.snp.centerY)
+            make.height.equalTo(20)
+            make.trailing.equalTo(contentView.snp.trailing).offset(-12)
+            make.width.equalTo(20)
+        }
+        
+        collectionView.snp.makeConstraints { (make) in
+            make.top.equalTo(photosLabel.snp.bottom).offset(12)
+            make.leading.equalTo(collectionView.snp.leading)
+            make.trailing.equalTo(collectionView.snp.trailing)
+          //  make.height.equalTo(60)
+            make.bottom.equalTo(contentView.snp.bottom).offset(-12)
+        }
+        
+        
     }
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -89,7 +98,7 @@ extension PhotosTableViewCell: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return PhotoStorage().photoGrid.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

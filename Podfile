@@ -10,6 +10,6 @@ target 'Navigation' do
     pod 'Firebase/Core'
     pod 'GoogleSignIn'
     pod 'FirebaseDatabase'
- 
+    pod 'RealmSwift', '~>10'
     pod 'GoogleUtilities', '~> 7.5'
 end

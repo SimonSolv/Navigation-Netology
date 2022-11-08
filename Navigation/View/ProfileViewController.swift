@@ -10,7 +10,6 @@ class ProfileViewController: UIViewController, PhotosTableViewCellDelegate, Coor
         return table
     }()
 
-
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.isHidden = true
@@ -90,4 +89,5 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         return PostStorage.tableModel[section].footer
     }
+    
 }

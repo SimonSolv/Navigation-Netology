@@ -1,5 +1,6 @@
 import Foundation
 import UIKit
+import RealmSwift
 
 extension String {
     var digits:      String { return "0123456789" }
@@ -43,7 +44,7 @@ struct UserInfo {
 }
 
 func loginAlert() -> UIAlertController {
-    let alertVC = UIAlertController(title: "Ошибка", message: "Заполните все необходимые поля", preferredStyle: .alert )
+    let alertVC = UIAlertController(title: "Warning:", message: "Fill all neccessary fields", preferredStyle: .alert )
     let okAction = UIAlertAction(title: "Ok", style: .default, handler: {(_: UIAlertAction!) in print("Ok Action")})
     alertVC.addAction(okAction)
     return alertVC
@@ -53,5 +54,9 @@ protocol LoginViewControllerDelegate: AnyObject, CheckerServiceProtocol {
     func checkPswd (login: String, password: String) -> Bool
 }
 
-
-
+class Credentials: Object  {
+    @Persisted var login: String
+    @Persisted var password: String
+    @Persisted var isLoggedIn: Bool
+    @Persisted(primaryKey: true) var credentialId: ObjectId
+}

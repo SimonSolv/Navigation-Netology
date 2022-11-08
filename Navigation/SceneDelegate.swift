@@ -1,5 +1,7 @@
 import UIKit
+import FirebaseAuth
 import FirebaseCore
+import RealmSwift
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate  {
 
@@ -23,23 +25,36 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate  {
         window?.makeKeyAndVisible()
         let initialController = UITabBarController()
         let coordinator = AppCoordinator(controller: initialController)
-        
         let factory = ModuleFactory()
         coordinator.factory = factory
         factory.coordinator = coordinator
-
-
-        window?.rootViewController = coordinator.start()!
+        var isAuth = false
+        let realm = try! Realm()
+        let users = realm.objects(Credentials.self)
+        print(users.count)
+        if users.count == 1 {
+            if users.first?.isLoggedIn == true {
+                isAuth = true
+            }
+        }
+        if users.count > 1 {
+            for i in 0...users.count - 1 {
+                if users[i].isLoggedIn == true {
+                    isAuth = true
+                }
+            }
+        }
+        window?.rootViewController = coordinator.start(authorised: isAuth)!
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {
         
-//        do {
-//            try? FirebaseAuth.Auth.auth().signOut()
-//            return
-//            } catch {
-//            print(error.localizedDescription)
-//        }
+        do {
+            try? FirebaseAuth.Auth.auth().signOut()
+            return
+            } catch {
+            print(error.localizedDescription)
+        }
         
     }
 }

@@ -9,14 +9,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         print("User Email: \(user.profile?.email ?? "NO EMAIL")")
     }
-    
-    
-
 
     func application(_ application: UIApplication, open url: URL ,didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
-    //    GIDSignIn.sharedInstance.
-        
         return true
     }
     
@@ -31,8 +26,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         GIDSignIn.sharedInstance.handle(url)
     }
-    
-    
 
 }
 

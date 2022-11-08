@@ -26,10 +26,10 @@
 		CE974C8E28F5EB1F00E343E5 /* SearchJokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE974C8D28F5EB1F00E343E5 /* SearchJokeViewController.swift */; };
 		CE974C9028F5F0E000E343E5 /* JokeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE974C8F28F5F0E000E343E5 /* JokeTableViewCell.swift */; };
 		CE9DEEF82901CF3C00BA75D6 /* NameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9DEEF72901CF3C00BA75D6 /* NameTableViewCell.swift */; };
+		CEADC312291046E9007E03A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEADC311291046E9007E03A3 /* GoogleService-Info.plist */; };
 		CEBE015B27496A74009CFB06 /* iOSIntPackage in Frameworks */ = {isa = PBXBuildFile; productRef = CEBE015A27496A74009CFB06 /* iOSIntPackage */; };
 		CECEF9CF28E0BE0E00F87248 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEF9CE28E0BE0E00F87248 /* ProfileModel.swift */; };
 		CECEF9D128E0BE4300F87248 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEF9D028E0BE4300F87248 /* CoordinatorProtocol.swift */; };
-		CECEF9D328E0BE4D00F87248 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEF9D228E0BE4D00F87248 /* Dynamic.swift */; };
 		CECEF9D528E0BE7A00F87248 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEF9D428E0BE7A00F87248 /* AppCoordinator.swift */; };
 		CECEF9DA28E0C06D00F87248 /* CustomUIExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEF9D928E0C06D00F87248 /* CustomUIExtentions.swift */; };
 		CECEF9E028E0C07D00F87248 /* Checker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEF9DC28E0C07D00F87248 /* Checker.swift */; };
@@ -40,8 +40,6 @@
 		CECEF9EA28E0C23600F87248 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEF9E928E0C23600F87248 /* LoginModel.swift */; };
 		CED2D0BD26E532F600ED0387 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED2D0BC26E532F600ED0387 /* PostTableViewCell.swift */; };
 		CED2D0C426E9212700ED0387 /* ProfileTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED2D0C326E9212700ED0387 /* ProfileTableHeaderView.swift */; };
-		CED48DE629098CBB004A563C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CED48DE529098CBB004A563C /* GoogleService-Info.plist */; };
-		CED48DE82909915F004A563C /* GoogleFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED48DE72909915F004A563C /* GoogleFirebaseManager.swift */; };
 		CED48DEA2909AE43004A563C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED48DE92909AE43004A563C /* SignUpViewController.swift */; };
 		CED5A04927F7704500F3CD26 /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED5A04827F7704500F3CD26 /* FeedModel.swift */; };
 /* End PBXBuildFile section */
@@ -69,9 +67,9 @@
 		CE974C8D28F5EB1F00E343E5 /* SearchJokeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchJokeViewController.swift; sourceTree = "<group>"; };
 		CE974C8F28F5F0E000E343E5 /* JokeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeTableViewCell.swift; sourceTree = "<group>"; };
 		CE9DEEF72901CF3C00BA75D6 /* NameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTableViewCell.swift; sourceTree = "<group>"; };
+		CEADC311291046E9007E03A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CECEF9CE28E0BE0E00F87248 /* ProfileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		CECEF9D028E0BE4300F87248 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
-		CECEF9D228E0BE4D00F87248 /* Dynamic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
 		CECEF9D428E0BE7A00F87248 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		CECEF9D928E0C06D00F87248 /* CustomUIExtentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUIExtentions.swift; sourceTree = "<group>"; };
 		CECEF9DC28E0C07D00F87248 /* Checker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checker.swift; sourceTree = "<group>"; };
@@ -82,8 +80,6 @@
 		CECEF9E928E0C23600F87248 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		CED2D0BC26E532F600ED0387 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		CED2D0C326E9212700ED0387 /* ProfileTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableHeaderView.swift; sourceTree = "<group>"; };
-		CED48DE529098CBB004A563C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		CED48DE72909915F004A563C /* GoogleFirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleFirebaseManager.swift; sourceTree = "<group>"; };
 		CED48DE92909AE43004A563C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		CED5A04827F7704500F3CD26 /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
 		F5A63297DB210132A95D4B1D /* Pods-Navigation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Navigation.debug.xcconfig"; path = "Target Support Files/Pods-Navigation/Pods-Navigation.debug.xcconfig"; sourceTree = "<group>"; };
@@ -165,7 +161,6 @@
 			children = (
 				CECEF9DE28E0C07D00F87248 /* LoginInspector.swift */,
 				CECEF9DC28E0C07D00F87248 /* Checker.swift */,
-				CECEF9D228E0BE4D00F87248 /* Dynamic.swift */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -203,7 +198,6 @@
 		CE8D6E0B26A3069000A25380 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				CED48DE72909915F004A563C /* GoogleFirebaseManager.swift */,
 				CE8D6E0E26A3069000A25380 /* SceneDelegate.swift */,
 				CE8D6E0C26A3069000A25380 /* AppDelegate.swift */,
 				CE545B5028E356AF0027C88A /* ViewModel */,
@@ -214,8 +208,8 @@
 				CECEF9D828E0C06D00F87248 /* CustomUI */,
 				CE8D6E1526A3069900A25380 /* Assets.xcassets */,
 				CE8D6E1726A3069900A25380 /* LaunchScreen.storyboard */,
+				CEADC311291046E9007E03A3 /* GoogleService-Info.plist */,
 				CE8D6E1A26A3069900A25380 /* Info.plist */,
-				CED48DE529098CBB004A563C /* GoogleService-Info.plist */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -296,7 +290,7 @@
 			files = (
 				CE8D6E1926A3069900A25380 /* LaunchScreen.storyboard in Resources */,
 				CE8D6E1626A3069900A25380 /* Assets.xcassets in Resources */,
-				CED48DE629098CBB004A563C /* GoogleService-Info.plist in Resources */,
+				CEADC312291046E9007E03A3 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,7 +368,6 @@
 				CE8D6E2926A30EFD00A25380 /* JokeViewController.swift in Sources */,
 				CE974C8E28F5EB1F00E343E5 /* SearchJokeViewController.swift in Sources */,
 				CE974C9028F5F0E000E343E5 /* JokeTableViewCell.swift in Sources */,
-				CECEF9D328E0BE4D00F87248 /* Dynamic.swift in Sources */,
 				CED5A04927F7704500F3CD26 /* FeedModel.swift in Sources */,
 				CE8D6E0D26A3069000A25380 /* AppDelegate.swift in Sources */,
 				CECEF9DA28E0C06D00F87248 /* CustomUIExtentions.swift in Sources */,
@@ -385,7 +378,6 @@
 				CE8485C6290EEC800008CE5D /* CheckerServiceProtocol.swift in Sources */,
 				CECEF9E328E0C07D00F87248 /* LoginViewController.swift in Sources */,
 				CECEF9E828E0C08900F87248 /* GalleryViewController.swift in Sources */,
-				CED48DE82909915F004A563C /* GoogleFirebaseManager.swift in Sources */,
 				CECEF9CF28E0BE0E00F87248 /* ProfileModel.swift in Sources */,
 				CED2D0C426E9212700ED0387 /* ProfileTableHeaderView.swift in Sources */,
 				CE9DEEF82901CF3C00BA75D6 /* NameTableViewCell.swift in Sources */,

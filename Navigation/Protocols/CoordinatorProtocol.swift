@@ -8,7 +8,7 @@ protocol CoordinatorProtocol {
 
 
     func eventAction(event: Event, iniciator: UIViewController)
-    func start() -> UITabBarController?
+    func start(authorised: Bool) -> UITabBarController?
 }
 
 protocol Coordinated {
