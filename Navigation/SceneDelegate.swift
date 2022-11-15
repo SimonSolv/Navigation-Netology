@@ -18,8 +18,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate  {
 
         guard let scene = (scene as? UIWindowScene) else { return }
         
-//        let appConfiguration = AppConfiguration.allCases.randomElement()!.rawValue
-//        NetworkService.request(for: appConfiguration)
+        let appConfiguration = AppConfiguration.allCases.randomElement()!.rawValue
+        NetworkService.request(for: appConfiguration)
         FirebaseApp.configure()
         window = UIWindow(windowScene: scene)
         window?.makeKeyAndVisible()

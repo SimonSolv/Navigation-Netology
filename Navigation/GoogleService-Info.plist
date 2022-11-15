@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>453388259695-17omfcqm8fr926fcehguloregfpm1rni.apps.googleusercontent.com</string>
+	<string>822406758404-fev69ian0g95hb9jcgve9pisak35s5bl.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.453388259695-17omfcqm8fr926fcehguloregfpm1rni</string>
+	<string>com.googleusercontent.apps.822406758404-fev69ian0g95hb9jcgve9pisak35s5bl</string>
 	<key>API_KEY</key>
-	<string>GoogleApiKey</string>
+	<string>AIzaSyAWrB3dCSnrt56MDE7-Zz1KdwS0IdpCqOQ</string>
 	<key>GCM_SENDER_ID</key>
-	<string>453388259695</string>
+	<string>822406758404</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>sp.Navigation</string>
 	<key>PROJECT_ID</key>
-	<string>netology-cd176</string>
+	<string>navigation-netology-b4e12</string>
 	<key>STORAGE_BUCKET</key>
-	<string>netology-cd176.appspot.com</string>
+	<string>navigation-netology-b4e12.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:453388259695:ios:3d11ed9e0bcbaf1465d89a</string>
+	<string>1:822406758404:ios:fb08d40330df4dfcedb551</string>
 </dict>
 </plist>
