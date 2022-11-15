@@ -1,181 +1,12 @@
-
-.DS_Store
-
-
-.Trashes
-
-
-*.swp
-
-
-*.lock
-
-
-*~.nib
-
-
-####
-# Xcode build files -
-#
-# NB: slash on the end, so we only remove the FOLDER, not any files that were badly named "DerivedData"
-
-DerivedData/
-
-# NB: slash on the end, so we only remove the FOLDER, not any files that were badly named "build"
-
-build/
-
-
-#####
-# Xcode private settings (window sizes, bookmarks, breakpoints, custom executables, smart groups)
-#
-# This is complicated:
-#
-# SOMETIMES you need to put this file in version control.
-# Apple designed it poorly - if you use "custom executables", they are
-#  saved in this file.
-# 99% of projects do NOT use those, so they do NOT want to version control this file.
-#  ..but if you're in the 1%, comment out the line "*.pbxuser"
-
-# .pbxuser: http://lists.apple.com/archives/xcode-users/2004/Jan/msg00193.html
-
-*.pbxuser
-
-# .mode1v3: http://lists.apple.com/archives/xcode-users/2007/Oct/msg00465.html
-
-*.mode1v3
-
-# .mode2v3: http://lists.apple.com/archives/xcode-users/2007/Oct/msg00465.html
-
-*.mode2v3
-
-# .perspectivev3: http://stackoverflow.com/questions/5223297/xcode-projects-what-is-a-perspectivev3-file
-
-*.perspectivev3
-
-#    NB: also, whitelist the default ones, some projects need to use these
-!default.pbxuser
-!default.mode1v3
-!default.mode2v3
-!default.perspectivev3
-
-
-####
-# Xcode 4 - semi-personal settings
-#
-# Apple Shared data that Apple put in the wrong folder
-# c.f. http://stackoverflow.com/a/19260712/153422
-#     FROM ANSWER: Apple says "don't ignore it"
-#     FROM COMMENTS: Apple is wrong; Apple code is too buggy to trust; there are no known negative side-effects to ignoring Apple's unofficial advice and instead doing the thing that actively fixes bugs in Xcode
-# Up to you, but ... current advice: ignore it.
-*.xccheckout
-
-
-# OPTION 1: ---------------------------------
-#     throw away ALL personal settings (including custom schemes!
-#     - unless they are "shared")
-# As per build/ and DerivedData/, this ought to have a trailing slash
-#
-# NB: this is exclusive with OPTION 2 below
-# xcuserdata/
-
-
-# OPTION 2: ---------------------------------
-#     get rid of ALL personal settings, but KEEP SOME OF THEM
-#     - NB: you must manually uncomment the bits you want to keep
-#
-# NB: this *requires* git v1.8.2 or above; you may need to upgrade to latest OS X,
-#    or manually install git over the top of the OS X version
-# NB: this is exclusive with OPTION 1 above
-#
-xcuserdata/**/*
-
-
-
-####
-# Xcode 4 - Deprecated classes
-#
-# Allegedly, if you manually "deprecate" your classes, they get moved here.
-#
-# We're using source-control, so this is a "feature" that we do not want!
-
-*.moved-aside
-
-####
-# OPTIONAL: Some well-known tools that people use side-by-side with Xcode / iOS development
-#
-# NB: I'd rather not include these here, but gitignore's design is weak and doesn't allow
-#     modular gitignore: you have to put EVERYTHING in one file.
-#
-# COCOAPODS:
-#
-# c.f. http://guides.cocoapods.org/using/using-cocoapods.html#what-is-a-podfilelock
-# c.f. http://guides.cocoapods.org/using/using-cocoapods.html#should-i-ignore-the-pods-directory-in-source-control
-#
-
-Podfile.lock
-
-
-# RUBY:
-#
-# c.f. http://yehudakatz.com/2010/12/16/clarifying-the-roles-of-the-gemspec-and-gemfile/
-#
-#!Gemfile.lock
-#
-# IDEA:
-#
-# c.f. https://www.jetbrains.com/objc/help/managing-projects-under-version-control.html?search=workspace.xml
-# 
-#.idea/workspace.xml
-#
-# TEXTMATE:
-#
-# -- UNVERIFIED: c.f. http://stackoverflow.com/a/50283/153422
-#
-#tm_build_errors
-
-FirebaseAuth/Tests/Sample/Sample/Application.plist
-FirebaseAuth/Tests/Sample/Sample/AuthCredentials.h
-FirebaseAuth/Tests/Sample/Sample/GoogleService-Info_multi.plist
-FirebaseAuth/Tests/Sample/Sample/GoogleService-Info.plist
-FirebaseAuth/Tests/Sample/Sample/Sample.entitlements
-FirebaseAuth/Tests/Sample/ApiTests/AuthCredentials.h
-FirebaseAuth/Tests/Sample/SwiftApiTests/Credentials.swift
-
-FirebaseDatabase/Tests/Resources/GoogleService-Info.plist
-
-FirebaseRemoteConfig/Tests/Sample/GoogleService-Info.plist
-FirebaseRemoteConfigSwift/Apps/SwiftUISample/SwiftUISample/GoogleService-Info.plist
-
-# FirebaseStorage integration tests GoogleService-Info.plist
-FirebaseStorage/Tests/Integration/Resources/GoogleService-Info.plist
-
-# FirebaseInstallations integration tests GoogleService-Info.plist
-FirebaseInstallations/Source/Tests/Resources/GoogleService-Info.plist
-
-# FirebaseMessaging integration tests GoogleService-Info.plist
-FirebaseMessaging/Tests/IntegrationTests/Resources/GoogleService-Info.plist
-# FirebaseMessaging test app GoogleService-Info.plist
-FirebaseMessaging/Apps/Shared/GoogleService-Info.plist
-FirebaseMessaging/Apps/AdvancedSample/SampleWatchWatchKitExtension/GoogleService-Info.plist
-FirebaseMessaging/Apps/AdvancedSample/AppClips/GoogleService-Info.plist
-
-# Credentials for Firebase Storage Integration Tests
-FirebaseStorage/Tests/ObjCIntegration/Credentials.h
-FirebaseStorage/Tests/Integration/Credentials.swift
-
-# FirebaseMLModelDownloader integration tests GoogleService-Info.plist
-FirebaseMLModelDownloader/Tests/Integration/Resources/GoogleService-Info.plist
-FirebaseMLModelDownloader/Apps/Sample/**/GoogleService-Info.plist
-
-# FirebasePerformance dev test App and integration tests GoogleService-Info.plist
-FirebasePerformance/**/GoogleService-Info.plist
-
-# OS X
-.DS_Store
-
 # Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
+## Build generated
 build/
+DerivedData
+
+## Various settings
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -184,158 +15,57 @@ build/
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
-xcuserdata/
+xcuserdata
+
+## Other
 *.xccheckout
-profile
 *.moved-aside
-DerivedData
+*.xcuserstate
+*.xcscmblueprint
+
+## Obj-C/Swift specific
 *.hmap
 *.ipa
 
+## Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
 # Swift Package Manager
-Package.resolved
-**/.build
-ReleaseTooling/.swiftpm
-ReleaseTooling/Packages
-ReleaseTooling/*.xcodeproj
-ReleaseTooling/Package.resolved
-scripts/code_coverage_report/*/Package.resolved
-scripts/code_coverage_report/*/.build
+#
+# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
+# Packages/
+.build/
 
-# Bad sorts get generated if the package .xcscheme is not regenerated.
-# Anything committed to xcshareddata gets propagated to clients. (#8167)
-.swiftpm/xcode/xcshareddata/
-
-# Mint package manager
-Mint
-
-# IntelliJ
-.idea
-
-# Vim
-*.swo
-*.swp
-*~
-
-# Bundler
-/.bundle
-/vendor
-
+# CocoaPods
+#
+# We recommend against adding the Pods directory to your .gitignore. However
+# you should judge for yourself, the pros and cons are mentioned at:
+# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
+#
 Pods/
-Podfile.lock
 
+# Carthage
+#
+# Add this line if you want to avoid checking in source code from Carthage dependencies.
+Carthage/Checkouts
 
-# Visual Studio
-/.vs
+Carthage/Build
 
-# Visual Studio Code
-/.vscode
+# fastlane
+#
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the 
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://github.com/fastlane/fastlane/blob/master/docs/Gitignore.md
 
-# clangd support file
-compile_commands.json
+fastlane/report.xml
+fastlane/screenshots
 
-# CocoaPods generate
-gen/
-
-# b/111916494
-default.profraw
-
-# Firestore emulator
-cloud-firestore-emulator.log
-cloud-firestore-emulator.pid
-
-# Let Gemfiles in CocoaPodsIntegrationTest float to catch issues asap
-CocoaPodsIntegrationTest/**/Gemfile.lock
-CocoaPodsIntegrationTest/Gemfile
-CocoaPodsIntegrationTest/Podfile
-
-# In-app messaging integration tests
-FirebaseInAppMessaging/Tests/Integration/FunctionalTestApp/GoogleService-Info.plist
-FirebaseInAppMessaging/Tests/Integration/FunctionalTestApp/App/InAppMessaging-Example-iOS/AppDelegate.m
-
-# FIRAppCheckTestApp
-FirebaseAppCheck/Apps/FIRAppCheckTestApp/FIRAppCheckTestApp/GoogleService-Info.plist
-FirebaseAppCheck/Apps/AppCheckCustomProvideApp/AppCheckCustomProvideApp/GoogleService-Info.plist
-
-# FirestoreSample
-/Example/FirestoreSample/FirestoreSample/GoogleService-Info.plist
-/Example/FirestoreSample/ui-debug.log
-/Example/FirestoreSample/firestore-debug.log
-
-.DS_Store
-
-# Merge files
-*.orig
-
-# Binaries
-*.dylib
-*.a
-*.o
-*.d
-*.libdeps
-*.zip
-*.realm
-!examples/ios/swift/Migration/RealmTemplates/*.realm
-!examples/ios/objc/Migration/RealmTemplates/*.realm
-*.realm.lock
-
-# core
-core
-core-*
-realm-core-*-xcframework
-
-# sh build.sh test
-build/
-
-
-# sh build.sh cocoapods-setup
-/include
-
-# sh build.sh docs
-/docs/objc_output
-/docs/swift_output
-/Realm/RLMPlatform.h
-
-# XCode
-*.bak
-xcuserdata/
-project.xcworkspace
-*.xccheckout
-DerivedData
-/.build
 
 # AppCode
-.idea/
-*.iml
-# backup and crash files
-*.swp
+# https://intellij-support.jetbrains.com/hc/en-us/articles/206544839-How-to-manage-projects-under-Version-Control-Systems
 
-# xcpretty
-build.log
-
-# ruby
-*.gem
-*.rbc
-/.config
-/coverage/
-/InstalledFiles
-/pkg/
-/spec/reports/
-/test/tmp/
-/test/version_tmp/
-/tmp/
-
-## Carthage
-# Cartfiles are ignored because they're generated on demand in the installation examples
-Cartfile
-Carthage
-
-## Swift Version
-SwiftVersion.swift
-
-examples/ios/objc/Draw/Constants.h
-
-## Sync testing
-/.baas
-
-
+.idea/workspace.xml
+.idea/tasks.xml
+.DS_Store
